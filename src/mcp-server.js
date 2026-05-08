@@ -4,8 +4,8 @@ import { startProjectTreeServer, stopProjectTreeServer, getProjectRoot } from ".
 
 const TOOLS = [
   {
-    name: "project_tree_start",
-    description: "Start the local project tree selector web app and return the in-app-browser URL.",
+    name: "project_lens_start",
+    description: "Start the local Project Lens web app and return the in-app-browser URL.",
     inputSchema: {
       type: "object",
       properties: {
@@ -24,8 +24,8 @@ const TOOLS = [
     }
   },
   {
-    name: "project_tree_status",
-    description: "Return the current project tree selector server status.",
+    name: "project_lens_status",
+    description: "Return the current Project Lens server status.",
     inputSchema: {
       type: "object",
       properties: {},
@@ -33,8 +33,8 @@ const TOOLS = [
     }
   },
   {
-    name: "project_tree_stop",
-    description: "Stop the local project tree selector web app.",
+    name: "project_lens_stop",
+    description: "Stop the local Project Lens web app.",
     inputSchema: {
       type: "object",
       properties: {},
@@ -96,7 +96,7 @@ async function routeMethod(method, params) {
           tools: {}
         },
         serverInfo: {
-          name: "project-tree-selector",
+          name: "project-lens",
           version: "0.1.0"
         }
       };
@@ -113,7 +113,7 @@ async function routeMethod(method, params) {
 
 async function callTool(params) {
   const { name, arguments: args = {} } = params;
-  if (name === "project_tree_start") {
+  if (name === "project_lens_start") {
     currentServer = await startProjectTreeServer({
       existing: currentServer,
       port: args.port ?? Number(process.env.PROJECT_TREE_PORT || 0),
@@ -127,7 +127,7 @@ async function callTool(params) {
     });
   }
 
-  if (name === "project_tree_status") {
+  if (name === "project_lens_status") {
     return toolResult({
       ok: true,
       running: Boolean(currentServer),
@@ -136,7 +136,7 @@ async function callTool(params) {
     });
   }
 
-  if (name === "project_tree_stop") {
+  if (name === "project_lens_stop") {
     await stopProjectTreeServer(currentServer);
     currentServer = null;
     return toolResult({ ok: true, running: false });

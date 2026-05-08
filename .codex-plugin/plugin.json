@@ -1,25 +1,25 @@
 {
-  "name": "project-tree-selector",
+  "name": "project-lens",
   "version": "0.1.0",
-  "description": "Open an in-app browser file tree selector for the current project folder.",
+  "description": "Open an in-app browser project lens for the current project folder.",
   "author": {
     "name": "Local",
     "email": "local@example.com",
     "url": "https://example.com"
   },
   "homepage": "https://trees.software/docs",
-  "repository": "https://example.com/project-tree-selector",
+  "repository": "https://example.com/project-lens",
   "license": "MIT",
   "keywords": [
+    "project-lens",
     "file-tree",
-    "selector",
     "browser"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Project Tree Selector",
-    "shortDescription": "Browse the current project as a selectable file tree.",
+    "displayName": "Project Lens",
+    "shortDescription": "Browse and inspect the current project as a file tree.",
     "longDescription": "Starts a local web app and opens it in Codex's in-app browser. The app renders the current project folder with @pierre/trees and exposes selection, refresh, file preview, and Git status indicators.",
     "developerName": "Local",
     "category": "Productivity",
@@ -32,7 +32,7 @@
     "privacyPolicyURL": "https://example.com/privacy",
     "termsOfServiceURL": "https://example.com/terms",
     "defaultPrompt": [
-      "Open the project tree selector.",
+      "Open Project Lens.",
       "Show the current project files.",
       "Browse this repo in the file tree."
     ],

@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "project-tree-selector": {
+    "project-lens": {
       "command": "node",
       "args": [
         "./src/mcp-server.js"

@@ -6,7 +6,7 @@ const server = await startProjectTreeServer({
   root: process.env.PROJECT_TREE_ROOT || null
 });
 
-console.log(`Project tree selector: ${server.url}`);
+console.log(`Project Lens: ${server.url}`);
 console.log(`Root: ${server.root}`);
 
 process.on("SIGINT", () => process.exit(0));

@@ -1,11 +1,11 @@
 {
-  "name": "knowledgebase-local",
+  "name": "project-lens-local",
   "interface": {
-    "displayName": "ProjectLens Local Plugins"
+    "displayName": "Project Lens Local Plugins"
   },
   "plugins": [
     {
-      "name": "project-tree-selector",
+      "name": "project-lens",
       "source": {
         "source": "local",
         "path": "."
