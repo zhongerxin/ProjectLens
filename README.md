@@ -6,6 +6,14 @@ Project Lens is a local Codex plugin that opens the current workspace as an inte
 
 The screenshot above shows Project Lens embedded next to an active Codex conversation. The left pane renders the project tree with search, folders, file icons, and Git status indicators. The right pane previews the selected file, including Markdown rendering and syntax-highlighted source views.
 
+## Quick Install
+
+In Codex, ask the assistant to install this plugin directly from GitHub:
+
+```text
+Install the plugin from https://github.com/zhongerxin/ProjectLens
+```
+
 ## Features
 
 - Interactive project tree powered by [`@pierre/trees`](https://trees.software)
@@ -79,14 +87,6 @@ This repository already includes the files Codex needs for a local plugin instal
 - `.mcp.json`
 - `skills/open-project-lens/SKILL.md`
 - `.agents/plugins/marketplace.json`
-
-### Quick Install
-
-In Codex, ask the assistant to install this plugin directly from GitHub:
-
-```text
-Install the plugin from https://github.com/zhongerxin/ProjectLens
-```
 
 Codex should inspect the repository, detect the `.codex-plugin/plugin.json` manifest, install the plugin, and make the **Project Lens** skill and MCP tools available.
 
