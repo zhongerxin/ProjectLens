@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "project-tree-selector": {
+      "command": "node",
+      "args": [
+        "./src/mcp-server.js"
+      ],
+      "cwd": "."
+    }
+  }
+}
