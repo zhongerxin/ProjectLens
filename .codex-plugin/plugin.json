@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "Open an in-app browser project lens for the current project folder.",
   "author": {
-    "name": "Local",
-    "email": "local@example.com",
-    "url": "https://example.com"
+    "name": "ZHONG XIN",
+    "email": "zhongxin123456@gmail.com",
+    "url": "https://jiqiren.ai"
   },
-  "homepage": "https://trees.software/docs",
-  "repository": "https://example.com/project-lens",
+  "homepage": "https://github.com/zhongerxin/ProjectLens",
+  "repository": "https://github.com/zhongerxin/ProjectLens",
   "license": "MIT",
   "keywords": [
     "project-lens",
@@ -28,9 +28,9 @@
       "MCP",
       "Local Files"
     ],
-    "websiteURL": "https://trees.software/docs",
-    "privacyPolicyURL": "https://example.com/privacy",
-    "termsOfServiceURL": "https://example.com/terms",
+    "websiteURL": "https://github.com/zhongerxin/ProjectLens",
+    "privacyPolicyURL": "https://github.com/zhongerxin/ProjectLens",
+    "termsOfServiceURL": "https://github.com/zhongerxin/ProjectLens",
     "defaultPrompt": [
       "Open Project Lens.",
       "Show the current project files.",

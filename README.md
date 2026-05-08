@@ -8,7 +8,7 @@ The screenshot above shows Project Lens embedded next to an active Codex convers
 
 ## Features
 
-- Interactive project tree powered by `@pierre/trees`
+- Interactive project tree powered by [`@pierre/trees`](https://trees.software)
 - Searchable, compact file browser for the current workspace
 - Read-only file preview API
 - Markdown preview with GitHub-flavored Markdown support
@@ -25,7 +25,7 @@ Project Lens is packaged as a Codex plugin:
 - `.mcp.json` registers the local MCP server.
 - `src/mcp-server.js` exposes the `project_tree_start`, `project_tree_status`, and `project_tree_stop` tools.
 - `src/web-server.js` starts a localhost HTTP server, serves the built web app, and exposes `/api/tree`, `/api/file`, and `/api/events`.
-- `web/src/main.jsx` implements the React interface.
+- `web/src/main.jsx` implements the React interface and renders the file tree with [`@pierre/trees`](https://trees.software).
 - `skills/open-project-tree-selector/SKILL.md` tells Codex how to start the service and open it in the in-app browser.
 
 ## Requirements
