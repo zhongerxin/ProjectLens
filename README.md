@@ -80,7 +80,19 @@ This repository already includes the files Codex needs for a local plugin instal
 - `skills/open-project-lens/SKILL.md`
 - `.agents/plugins/marketplace.json`
 
-To install it in Codex:
+### Quick Install
+
+In Codex, ask the assistant to install this plugin directly from GitHub:
+
+```text
+Install the plugin from https://github.com/zhongerxin/ProjectLens
+```
+
+Codex should inspect the repository, detect the `.codex-plugin/plugin.json` manifest, install the plugin, and make the **Project Lens** skill and MCP tools available.
+
+### Manual Local Install
+
+If you want to install from a local checkout instead:
 
 1. Build the plugin:
 
