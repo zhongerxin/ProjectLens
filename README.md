@@ -23,10 +23,10 @@ Project Lens is packaged as a Codex plugin:
 
 - `.codex-plugin/plugin.json` describes the plugin metadata, skills, MCP servers, and Codex UI information.
 - `.mcp.json` registers the local MCP server.
-- `src/mcp-server.js` exposes the `project_tree_start`, `project_tree_status`, and `project_tree_stop` tools.
+- `src/mcp-server.js` exposes the `project_lens_start`, `project_lens_status`, and `project_lens_stop` tools.
 - `src/web-server.js` starts a localhost HTTP server, serves the built web app, and exposes `/api/tree`, `/api/file`, and `/api/events`.
 - `web/src/main.jsx` implements the React interface and renders the file tree with [`@pierre/trees`](https://trees.software).
-- `skills/open-project-tree-selector/SKILL.md` tells Codex how to start the service and open it in the in-app browser.
+- `skills/open-project-lens/SKILL.md` tells Codex how to start the service and open it in the in-app browser.
 
 ## Requirements
 
@@ -61,7 +61,7 @@ npm start
 The command prints a local URL like:
 
 ```text
-Project tree selector: http://127.0.0.1:51018/
+Project Lens: http://127.0.0.1:51018/
 Root: /path/to/project
 ```
 
@@ -77,7 +77,7 @@ This repository already includes the files Codex needs for a local plugin instal
 
 - `.codex-plugin/plugin.json`
 - `.mcp.json`
-- `skills/open-project-tree-selector/SKILL.md`
+- `skills/open-project-lens/SKILL.md`
 - `.agents/plugins/marketplace.json`
 
 To install it in Codex:
@@ -89,11 +89,11 @@ To install it in Codex:
    npm run build
    ```
 
-2. Make sure the local marketplace entry points to this repository. The included `.agents/plugins/marketplace.json` registers `project-tree-selector` from the current directory:
+2. Make sure the local marketplace entry points to this repository. The included `.agents/plugins/marketplace.json` registers `project-lens` from the current directory:
 
    ```json
    {
-     "name": "project-tree-selector",
+     "name": "project-lens",
      "source": {
        "source": "local",
        "path": "."
@@ -106,12 +106,12 @@ To install it in Codex:
    }
    ```
 
-3. Open Codex, go to the plugin or extensions area, and install **Project Tree Selector** from the local marketplace.
+3. Open Codex, go to the plugin or extensions area, and install **Project Lens** from the local marketplace.
 
 4. Start a Codex conversation in the workspace you want to browse and ask:
 
    ```text
-   Open the project tree selector.
+   Open Project Lens.
    ```
 
    Codex will call the plugin's MCP tool, start the local server, and open the returned localhost URL in the in-app browser.
@@ -124,11 +124,11 @@ The plugin exposes three MCP tools:
 
 | Tool | Purpose |
 | --- | --- |
-| `project_tree_start` | Starts the local web app and returns the browser URL. |
-| `project_tree_status` | Reports whether the web app is running and which root it is browsing. |
-| `project_tree_stop` | Stops the local web app. |
+| `project_lens_start` | Starts the local web app and returns the browser URL. |
+| `project_lens_status` | Reports whether the web app is running and which root it is browsing. |
+| `project_lens_stop` | Stops the local web app. |
 
-`project_tree_start` accepts an optional `root` argument. When installing this as a home-local plugin, pass the current Codex workspace path as `root` so the tree opens the active project instead of the plugin directory.
+`project_lens_start` accepts an optional `root` argument. When installing this as a home-local plugin, pass the current Codex workspace path as `root` so the tree opens the active project instead of the plugin directory.
 
 ## Development
 

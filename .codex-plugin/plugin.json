@@ -21,7 +21,7 @@
     "displayName": "Project Lens",
     "shortDescription": "Browse and inspect the current project as a file tree.",
     "longDescription": "Starts a local web app and opens it in Codex's in-app browser. The app renders the current project folder with @pierre/trees and exposes selection, refresh, file preview, and Git status indicators.",
-    "developerName": "Local",
+    "developerName": "ZHONG XIN",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
