@@ -116,8 +116,6 @@ function App() {
     };
   }, [loadPreview, loadTree]);
 
-  const treeKey = `${treeData?.generatedAt ?? "empty"}:${treeData?.paths?.length ?? 0}`;
-
   const clampTreeWidth = useCallback((nextWidth) => {
     const workspaceWidth = workspaceRef.current?.getBoundingClientRect().width ?? window.innerWidth;
     const maxWidth = Math.max(340, Math.min(720, workspaceWidth - 320));
@@ -170,7 +168,6 @@ function App() {
           {error && <div className="state-text error">{error}</div>}
           {treeData && (
             <ProjectTree
-              key={treeKey}
               paths={treeData.paths}
               gitStatus={treeData.gitStatus}
               selectedPath={selectedPath}
@@ -205,7 +202,7 @@ function ProjectTree({ paths, gitStatus, selectedPath, onSelect }) {
   const { model } = useFileTree({
     paths,
     gitStatus,
-    initialExpansion: 1,
+    initialExpansion: 0,
     initialSelectedPaths: selectedPath ? [selectedPath] : [],
     flattenEmptyDirectories: true,
     fileTreeSearchMode: "expand-matches",
