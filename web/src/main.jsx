@@ -224,6 +224,8 @@ function ProjectTree({ paths, gitStatus, selectedPath, onSelect }) {
       style={{
         height: "100%",
         "--trees-bg-override": "#ffffff",
+        "--trees-search-bg-override": "#ffffff",
+        "--trees-search-fg-override": "#172033",
         "--trees-selected-bg-override": "#dbeafe",
         "--trees-border-color-override": "#d8dee8"
       }}
