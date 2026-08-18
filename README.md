@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/zhongerxin-projectlens-badge.png)](https://mseep.ai/app/zhongerxin-projectlens)
+
 # Project Lens
 
 Project Lens is a local Codex plugin that opens the current workspace as an interactive file tree inside Codex's in-app browser. It is built for quickly browsing a project, selecting files, previewing source and Markdown content, and seeing Git status without leaving the Codex workflow.
